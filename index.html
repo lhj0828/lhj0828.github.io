@@ -1,7 +1,164 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="임현지의 개인 홈페이지" />
+    <title>임현지 | Personal Page</title>
+    <style>
+      :root {
+        --navy: #172554;
+        --blue: #2563eb;
+        --sky: #eff6ff;
+        --text: #1f2937;
+        --muted: #64748b;
+        --line: #dbeafe;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: #f8fafc;
+        font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+        line-height: 1.7;
+      }
+
+      .container {
+        width: min(100% - 40px, 900px);
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 84px 0 68px;
+        color: white;
+        background: linear-gradient(135deg, var(--navy), var(--blue));
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.82;
+      }
+
+      h1, h2, p { margin-top: 0; }
+
+      h1 {
+        margin-bottom: 12px;
+        font-size: clamp(2.3rem, 7vw, 4rem);
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+      }
+
+      .tagline {
+        max-width: 620px;
+        margin: 0;
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        opacity: 0.92;
+      }
+
+      main { padding: 52px 0 72px; }
+
+      section {
+        margin-bottom: 24px;
+        padding: 32px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(30, 64, 175, 0.06);
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        color: var(--navy);
+        font-size: 1.35rem;
+        letter-spacing: -0.02em;
+      }
+
+      .interests {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .interests li {
+        padding: 8px 14px;
+        color: #1d4ed8;
+        background: var(--sky);
+        border-radius: 999px;
+        font-weight: 600;
+      }
+
+      .contact {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 11px 16px;
+        color: white;
+        background: var(--blue);
+        border-radius: 10px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .contact:hover { background: #1d4ed8; }
+
+      footer {
+        padding: 28px 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        .container { width: min(100% - 32px, 900px); }
+        header { padding: 64px 0 52px; }
+        main { padding: 32px 0 48px; }
+        section { padding: 24px; border-radius: 16px; }
+      }
+    </style>
+  </head>
   <body>
-    <h1>안녕하세요, 제 홈페이지입니다.</h1>
-    <p>Github Pages로 만들었습니다!</p>
+    <header>
+      <div class="container">
+        <p class="eyebrow">Personal Homepage</p>
+        <h1>임현지</h1>
+        <p class="tagline">서울대학교 첨단융합학부 재학생 · 디지털헬스케어와 뇌공학에 관심이 있습니다.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section aria-labelledby="about-title">
+        <h2 id="about-title">소개</h2>
+        <p>안녕하세요. 서울대학교 첨단융합학부에 재학 중인 임현지입니다. 사람들의 삶에 도움이 되는 기술을 고민하며 배우고 있습니다.</p>
+      </section>
+
+      <section aria-labelledby="interest-title">
+        <h2 id="interest-title">관심사</h2>
+        <ul class="interests">
+          <li>디지털헬스케어</li>
+          <li>뇌공학</li>
+          <li>융합 연구</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">연락처</h2>
+        <p>문의는 아래 연락처로 부탁드립니다.</p>
+        <a class="contact" href="tel:01000001382" aria-label="임현지에게 전화하기">010-xxxx-1382</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 임현지. All rights reserved.</div>
+    </footer>
   </body>
 </html>
+
